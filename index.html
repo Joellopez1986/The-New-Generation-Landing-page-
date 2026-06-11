@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New Generation</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url('istockphoto-1732522693-612x612.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Aligns the links and the new button perfectly straight */
+            gap: 35px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        /* --- TURNING THE GALLERY LINK INTO A NAV BUTTON --- */
+        nav ul li a.nav-button {
+            background: rgba(212, 175, 55, 0.2); /* Soft gold tint background */
+            border: 2px solid #d4af37;           /* Elegant gold border */
+            padding: 8px 20px;                   /* Padding inside the button */
+            border-radius: 4px;                  /* Slightly rounds the corners */
+            text-shadow: none;                   /* Removes text shadow for cleaner button text */
+        }
+
+        /* What happens when you hover over the new Gallery nav button */
+        nav ul li a.nav-button:hover {
+            background: #d4af37;                 /* Fills completely with gold */
+            color: #1a1a1a;                      /* Text turns dark for contrast */
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .hero-content .sub-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            color: #e0e0e0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin: 10px 0 20px 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+            font-weight: 700;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin: 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        /* --- THE LOWER GALLERY SECTION --- */
+        .gallery-section {
+            height: 100vh;
+            background-color: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#HOME" class="nav-button">HOME</a></li>
+                <li><a href="#about" class="nav-button">ABOUT</a></li>
+                <li><a href="#contact" class="nav-button">CONTACT</a></li>
+                
+                <li><a href="#gallery" class="nav-button">GALLERY</a></li>
+                
+                <li><a href="#products" class="nav-button">PRODUCTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-content">
+        <p class="sub-title">The New Generation of Style</p>
+        <h1>Explore our latest captivating collection.</h1>
+        <p class="tagline">Summer is here—step out and embrace the majestic sunshine.</p>
+    </main>
+
+    <section id="gallery" class="gallery-section">
+        <h2>Our Gallery Section (Coming Soon)</h2>
+    </section>
+
+<section id="products" class="products-section"> 
+    <h2>Our Products Section (Coming Soon)</h2>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New Generation</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        nav ul li a.nav-button {
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid #d4af37;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+
+        nav ul li a.nav-button:hover {
+            background: #d4af37;
+            color: #1a1a1a;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            background-image: url('istockphoto-1732522693-612x612.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .hero-section .sub-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            color: #e0e0e0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin: 10px 0 20px 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+            font-weight: 700;
+        }
+
+        .hero-section .tagline {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin: 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        /* --- CONTENT SECTION STRUCTURAL DESIGN --- */
+        .content-section {
+            padding: 100px 40px;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .light-bg {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .dark-bg {
+            background-color: #111111;
+            color: #fff;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .content-section p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* --- PRODUCT GRID --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .product-card {
+            background: #1f1f1f;
+            border: 1px solid #333;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .product-card h4 {
+            margin: 15px 0 5px 0;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .product-card .price {
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 8px 15px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .product-card button:hover {
+            background: white;
+            color: #111;
+        }
+
+        /* --- GALLERY GRID --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#HOME">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#gallery" class="nav-button">GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECTION 1: HOME -->
+    <main id="HOME" class="hero-section">
+        <p class="sub-title">The New Generation of Style</p>
+        <h1>Explore our latest captivating collection.</h1>
+        <p class="tagline">Summer is here—step out and embrace the majestic sunshine.</p>
+    </main>
+
+    <!-- SECTION 2: ABOUT -->
+    <section id="about" class="content-section light-bg">
+        <h2>Our Story</h2>
+        <p>The New Generation isn't just about fashion—it's a movement. We handcraft minimalist, modern summer aesthetics designed to bring comfort, durability, and bold statements into your daily wardrobe.</p>
+    </section>
+
+    <!-- SECTION 3: PRODUCTS -->
+    <section id="products" class="content-section dark-bg">
+        <h2>The Summer Collection</h2>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/shirt.jpg" alt="Summer Shirt">
+                <h4>Majestic Linen Shirt</h4>
+                <p class="price">$45.00</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/shorts.jpg" alt="Summer Shorts">
+                <h4>Classic Swim Shorts</h4>
+                <p class="price">$35.00</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/hat.jpg" alt="Summer Hat">
+                <h4>Sun Protection Cap</h4>
+                <p class="price">$25.00</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: GALLERY -->
+    <section id="gallery" class="content-section light-bg">
+        <h2>Lookbook Gallery</h2>
+        
+        <div class="gallery-grid">
+            <img src="images/lookbook1.jpg" alt="Model look 1">
+            <img src="images/lookbook2.jpg" alt="Model look 2">
+            <img src="images/lookbook3.jpg" alt="Model look 3">
+            <img src="images/lookbook4.jpg" alt="Model look 4">
+        </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT -->
+    <section id="contact" class="content-section dark-bg">
+        <h2>Connect With Us</h2>
+        <p>Want exclusive access to hidden collections? Leave your email or reach out to our team.</p>
+    </section>
+
+</body>
+</html>
